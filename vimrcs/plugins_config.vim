@@ -43,7 +43,7 @@ nmap <c-n> <Plug>yankstack_substitute_newer_paste
 """"""""""""""""""""""""""""""
 " => CTRL-P
 """"""""""""""""""""""""""""""
-let g:ctrlp_working_path_mode = 0
+let g:ctrlp_working_path_mode = 'ra'
 
 let g:ctrlp_map = '<c-f>'
 map <leader>j :CtrlP<cr>
@@ -155,6 +155,12 @@ let g:syntastic_javascript_checkers = ['jshint']
 " Go
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_go_checkers = ['go', 'golint', 'errcheck']
+
+" C
+let g:syntastic_c_checkers=[] 
+"let g:syntastic_c_compiler_options = ' -ansi'
+"let g:syntastic_c_compiler_options = ''
+"let g:syntastic_c_no_default_include_dirs = 1
 
 " Custom CoffeeScript SyntasticCheck
 func! SyntasticCheckCoffeescript()
