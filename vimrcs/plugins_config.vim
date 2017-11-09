@@ -8,6 +8,7 @@
 """"""""""""""""""""""""""""""
 " => Load pathogen paths
 """"""""""""""""""""""""""""""
+set laststatus=2
 let s:vim_runtime = expand('<sfile>:p:h')."/.."
 call pathogen#infect(s:vim_runtime.'/sources_forked/{}')
 call pathogen#infect(s:vim_runtime.'/sources_non_forked/{}')
@@ -148,6 +149,8 @@ let g:go_fmt_command = "goimports"
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Python
 let g:syntastic_python_checkers=['pyflakes']
+" let g:syntastic_python_flake8_exec = 'python3'
+" let g:syntastic_python_checkers=['flake8']
 
 " Javascript
 let g:syntastic_javascript_checkers = ['jshint']
@@ -177,3 +180,9 @@ nnoremap <silent> <leader>c :call SyntasticCheckCoffeescript()<cr>
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let g:gitgutter_enabled=0
 nnoremap <silent> <leader>d :GitGutterToggle<cr>
+
+
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" cscope
+"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set csre
